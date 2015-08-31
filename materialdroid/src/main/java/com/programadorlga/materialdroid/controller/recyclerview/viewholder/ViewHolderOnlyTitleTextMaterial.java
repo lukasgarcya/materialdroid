@@ -42,6 +42,5 @@ public class ViewHolderOnlyTitleTextMaterial extends RecyclerView.ViewHolder imp
         Intent intent = new Intent(this.view.getContext(), this.view.getContext().getClass().getAnnotation(AddButtonRecyclerView.class).value());
         intent.putExtra("id", this.id);
         ((Activity) this.view.getContext()).startActivityForResult(intent, RecyclerViewMaterialActivity.UPDATE);
-
     }
 }
