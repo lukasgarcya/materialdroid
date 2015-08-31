@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MaterialDroid</string>
+    <string name="save">Salvar</string>
+    <string name="delete">Apagar</string>
+</resources>

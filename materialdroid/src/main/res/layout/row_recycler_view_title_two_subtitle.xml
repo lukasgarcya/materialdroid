@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/row_recycler_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_only_title_material"
+        style="@style/TextOneListMaterial" />
+
+    <TextView
+        android:id="@+id/tv_sub_title_material"
+        style="@style/TextTwoListMaterial" />
+
+    <TextView
+        android:id="@+id/tv_sub_title2_material"
+        style="@style/TextThreeListMaterial" />
+
+</LinearLayout>

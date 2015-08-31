@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Sample</string>
+    <string name="data_de_fabricacao">Data de Fabricação</string>
+    <string name="cadastrar_produto">Cadastrar Produto</string>
+</resources>

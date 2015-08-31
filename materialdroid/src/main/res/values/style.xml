@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Toolbar" parent="Base.Widget.AppCompat.Toolbar">
+        <item name="android:background">@color/primary</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:elevation">4dp</item>
+    </style>
+
+    <style name="EditTextMaterial" parent="Widget.AppCompat.EditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="TextViewMaterial">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="OnlyContent">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="LinearLayoutVertical">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="FloatingActionButtonAdicionar" parent="Widget.Design.FloatingActionButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">bottom|right</item>
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:src">@drawable/ic_add</item>
+    </style>
+
+    <style name="RecylerViewNavigation">
+        <item name="android:layout_width">240dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_gravity">start</item>
+        <item name="android:background">#fff</item>
+        <item name="android:divider">@android:color/transparent</item>
+        <item name="android:dividerHeight">0dp</item>
+        <item name="android:scrollbars">vertical</item>
+    </style>
+
+    <style name="TextOnlyListMaterial">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">20dp</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/primary_text_default_material_light</item>
+    </style>
+
+    <style name="TextOneListMaterial" parent="TextOnlyListMaterial">
+
+    </style>
+
+    <style name="TextTwoListMaterial" parent="TextOnlyListMaterial">
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:textColor">@color/secondary_text_default_material_light</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextThreeListMaterial" parent="TextTwoListMaterial">
+
+    </style>
+</resources>
