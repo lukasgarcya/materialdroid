@@ -2,15 +2,12 @@ package com.programadorlga.materialdroid.controller.form;
 
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutCompat;
-import android.support.v7.widget.SwitchCompat;
 import android.text.InputType;
-import android.util.Log;
 import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 
 import com.programadorlga.materialdroid.R;
-import com.programadorlga.materialdroid.annotation.form.BooleanSwitch;
 import com.programadorlga.materialdroid.annotation.form.OrderFieldForm;
 import com.programadorlga.materialdroid.annotation.model.EntityMaterial;
 import com.programadorlga.materialdroid.view.AppCompatFormActivityToolBar;
@@ -63,7 +60,7 @@ public class FormActivity extends AppCompatFormActivityToolBar {
 
     private void addField() {
         try {
-            for (String field : ((OrderFieldForm) this.getClass().getAnnotation(OrderFieldForm.class)).value()) {
+            for (String field : this.getClass().getAnnotation(OrderFieldForm.class).value()) {
                 Field fieldEntity = entity.getDeclaredField(field);
                 Method get = null;
                 if (entityInstance != null) {
@@ -134,9 +131,11 @@ public class FormActivity extends AppCompatFormActivityToolBar {
             realm.beginTransaction();
             if (entityInstance == null) {
                 entityInstance = realm.createObject(entity);
+                Method set = entityInstance.getClass().getMethod("setId", Long.TYPE);
+                set.invoke(entityInstance, realm.where(entity).maximumInt("id") + 1);
             }
-            for (int i = 0; i < ((OrderFieldForm) this.getClass().getAnnotation(OrderFieldForm.class)).value().length; i++) {
-                Field fieldEntity = entity.getDeclaredField(((OrderFieldForm) this.getClass().getAnnotation(OrderFieldForm.class)).value()[i]);
+            for (int i = 0; i < this.getClass().getAnnotation(OrderFieldForm.class).value().length; i++) {
+                Field fieldEntity = entity.getDeclaredField(this.getClass().getAnnotation(OrderFieldForm.class).value()[i]);
                 Method set = entityInstance.getClass().getMethod("set" + fieldEntity.getName().substring(0, 1).toUpperCase() + fieldEntity.getName().substring(1),
                         fieldEntity.getType());
                 if (fieldEntity.getType().isAssignableFrom(String.class)) {
@@ -178,8 +177,6 @@ public class FormActivity extends AppCompatFormActivityToolBar {
                     set.invoke(entityInstance, booleanMaterial.isChecked());
                 }
             }
-            Method set = entityInstance.getClass().getMethod("setId", Long.TYPE);
-            set.invoke(entityInstance, realm.where(entity).maximumInt("id") + 1);
             realm.commitTransaction();
             setResult(RESULT_OK);
             finish();

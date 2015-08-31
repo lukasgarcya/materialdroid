@@ -4,13 +4,11 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
 import com.programadorlga.materialdroid.R;
 import com.programadorlga.materialdroid.annotation.recyclerview.AddButtonRecyclerView;
-import com.programadorlga.materialdroid.controller.form.FormActivity;
 import com.programadorlga.materialdroid.controller.recyclerview.RecyclerViewMaterialActivity;
 
 public class ViewHolderOnlyTitleTextMaterial extends RecyclerView.ViewHolder implements View.OnClickListener {
@@ -42,5 +40,6 @@ public class ViewHolderOnlyTitleTextMaterial extends RecyclerView.ViewHolder imp
         Intent intent = new Intent(this.view.getContext(), this.view.getContext().getClass().getAnnotation(AddButtonRecyclerView.class).value());
         intent.putExtra("id", this.id);
         ((Activity) this.view.getContext()).startActivityForResult(intent, RecyclerViewMaterialActivity.UPDATE);
+
     }
 }
