@@ -18,6 +18,7 @@ public class Produto extends RealmObject{
     private Date dataFabricacao;
     private float valor;
     private int quantidade;
+    private boolean excluido;
 
     public long getId() {
         return id;
@@ -57,5 +58,13 @@ public class Produto extends RealmObject{
 
     public void setQuantidade(int quantidade) {
         this.quantidade = quantidade;
+    }
+
+    public boolean getExcluido() {
+        return excluido;
+    }
+
+    public void setExcluido(boolean excluido) {
+        this.excluido = excluido;
     }
 }

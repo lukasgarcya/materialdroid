@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/MaterialDroid.iml" filepath="$PROJECT_DIR$/MaterialDroid.iml" />
-      <module fileurl="file://$PROJECT_DIR$/materialdroid/materialdroid.iml" filepath="$PROJECT_DIR$/materialdroid/materialdroid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/materialdroid.iml" filepath="$PROJECT_DIR$/materialdroid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/materialdroid/materialdroid-materialdroid.iml" filepath="$PROJECT_DIR$/materialdroid/materialdroid-materialdroid.iml" />
       <module fileurl="file://$PROJECT_DIR$/sample/sample.iml" filepath="$PROJECT_DIR$/sample/sample.iml" />
     </modules>
   </component>
